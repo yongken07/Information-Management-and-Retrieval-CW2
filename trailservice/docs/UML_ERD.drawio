@@ -1,0 +1,102 @@
+<mxfile host="65bd71144e">
+    <diagram name="TrailService ERD" id="trail-erd">
+        <mxGraphModel dx="1304" dy="1051" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="user-entity" value="USER" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="200" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-pk" value="PK: UserID (INT)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" parent="user-entity" vertex="1">
+                    <mxGeometry y="26" width="200" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-attrs" value="Username (NVARCHAR)&#xa;Email (NVARCHAR)&#xa;PasswordHash (NVARCHAR)&#xa;CreatedDate (DATETIME)&#xa;LastLoginDate (DATETIME)&#xa;IsActive (BIT)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="user-entity" vertex="1">
+                    <mxGeometry y="52" width="200" height="128" as="geometry"/>
+                </mxCell>
+                <mxCell id="trail-entity" value="TRAIL" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="40" width="220" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="trail-pk" value="PK: TrailID (INT)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" parent="trail-entity" vertex="1">
+                    <mxGeometry y="26" width="220" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="trail-fk" value="FK: UserID (INT)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=2" parent="trail-entity" vertex="1">
+                    <mxGeometry y="52" width="220" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="trail-attrs" value="TrailName (NVARCHAR)&#xa;Summary (NVARCHAR)&#xa;TrailDescription (NVARCHAR)&#xa;Length_Miles (DECIMAL)&#xa;Length_Km (DECIMAL)&#xa;Difficulty (NVARCHAR)&#xa;AccessibilityNotes (NVARCHAR)&#xa;RouteType (NVARCHAR)&#xa;NearestTown (NVARCHAR)&#xa;CreatedDate (DATETIME)&#xa;LastModifiedDate (DATETIME)&#xa;LastModifiedBy (INT)&#xa;IsPublic (BIT)&#xa;IsDeleted (BIT)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="trail-entity" vertex="1">
+                    <mxGeometry y="78" width="220" height="262" as="geometry"/>
+                </mxCell>
+                <mxCell id="location-entity" value="LOCATION" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="40" width="200" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="location-pk" value="PK: LocationID (INT)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" parent="location-entity" vertex="1">
+                    <mxGeometry y="26" width="200" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="location-attrs" value="LocationName (NVARCHAR)&#xa;Postcode (NVARCHAR)&#xa;Country (NVARCHAR)&#xa;Latitude (DECIMAL)&#xa;Longitude (DECIMAL)&#xa;CreatedDate (DATETIME)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="location-entity" vertex="1">
+                    <mxGeometry y="52" width="200" height="108" as="geometry"/>
+                </mxCell>
+                <mxCell id="review-entity" value="REVIEW" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="440" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="review-pk" value="PK: ReviewID (INT)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" parent="review-entity" vertex="1">
+                    <mxGeometry y="26" width="200" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="review-fks" value="FK: TrailID (INT)&#xa;FK: UserID (INT)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=2" parent="review-entity" vertex="1">
+                    <mxGeometry y="52" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="review-attrs" value="Rating (INT 1-5)&#xa;Title (NVARCHAR)&#xa;ReviewText (NVARCHAR)&#xa;HikingDate (DATE)&#xa;CreatedDate (DATETIME)&#xa;LastModifiedDate (DATETIME)&#xa;IsApproved (BIT)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="review-entity" vertex="1">
+                    <mxGeometry y="92" width="200" height="108" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-entity" value="AUDIT_LOG" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="440" width="220" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-pk" value="PK: AuditID (INT)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" parent="audit-entity" vertex="1">
+                    <mxGeometry y="26" width="220" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="audit-attrs" value="TableName (NVARCHAR)&#xa;RecordID (INT)&#xa;Action (NVARCHAR)&#xa;FieldChanged (NVARCHAR)&#xa;OldValue (NVARCHAR)&#xa;NewValue (NVARCHAR)&#xa;ChangedBy (NVARCHAR)&#xa;ChangedDate (DATETIME)&#xa;IPAddress (NVARCHAR)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="audit-entity" vertex="1">
+                    <mxGeometry y="52" width="220" height="148" as="geometry"/>
+                </mxCell>
+                <mxCell id="feature-entity" value="FEATURE" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="260" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="feature-pk" value="PK: FeatureID (INT)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=4" parent="feature-entity" vertex="1">
+                    <mxGeometry y="26" width="200" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="feature-attrs" value="FeatureName (NVARCHAR)&#xa;Description (NVARCHAR)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="feature-entity" vertex="1">
+                    <mxGeometry y="52" width="200" height="48" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-trail-rel" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;startArrow=none;startFill=0;endArrow=ERmany;endFill=0;" parent="1" source="user-entity" target="trail-entity" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-trail-label" value="owns (1:M)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="user-trail-rel" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="user-review-rel" value="" style="endArrow=ERmany;html=1;edgeStyle=orthogonalEdgeStyle;startArrow=none;startFill=0;endFill=0;" parent="1" source="user-entity" target="review-entity" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="user-review-label" value="writes (1:M)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="user-review-rel" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="trail-review-rel" value="" style="endArrow=ERmany;html=1;edgeStyle=orthogonalEdgeStyle;startArrow=none;startFill=0;endFill=0;" parent="1" source="trail-entity" target="review-entity" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="trail-review-label" value="receives (1:M)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="trail-review-rel" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="trail-feature-rel" value="" style="endArrow=ERmany;html=1;edgeStyle=orthogonalEdgeStyle;startArrow=ERmany;startFill=0;endFill=0;" parent="1" source="trail-entity" target="feature-entity" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="trail-feature-label" value="has (M:M)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="trail-feature-rel" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
