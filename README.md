@@ -9,8 +9,8 @@
 
 **Course**: Database Systems and Web Technologies  
 **Assessment**: CW2 - Microservice Implementation  
-**Student**: [Your Name Here]  
-**GitHub**: [Your GitHub Username]  
+**Student**: Yong Ken
+**GitHub**: yongken07 
 **Technology**: Java 17 + Spring Boot 3.2.0
 
 ---
@@ -754,9 +754,9 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 ## Contact
 
-**Student**: [Your Name Here]  
-**Email**: [your.email@university.ac.uk]  
-**GitHub**: https://github.com/[your-username]/trailservice
+**Student**: Yong Ken 
+**Email**: ken.yong@students.plymouth.ac.uk  
+**GitHub**: https://github.com/yongken07/Information-Management-and-Retrieval-CW2
 
 ---
 
