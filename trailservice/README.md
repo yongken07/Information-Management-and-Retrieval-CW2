@@ -9,8 +9,8 @@
 
 **Course**: Database Systems and Web Technologies  
 **Assessment**: CW2 - Microservice Implementation  
-**Student**: [Your Name Here]  
-**GitHub**: [Your GitHub Username]  
+**Student**: Yong Ken
+**GitHub**: yongken07 
 **Technology**: Java 17 + Spring Boot 3.2.0
 
 ---
@@ -733,7 +733,7 @@ This project is licensed under the MIT License.
 ```
 MIT License
 
-Copyright (c) 2024 [Your Name]
+Copyright (c) 2025 [Yong Ken]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -754,8 +754,8 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 ## Contact
 
-**Student**: [Your Name Here]  
-**Email**: [your.email@university.ac.uk]  
+**Student**: Yong Ken
+**Email**: ken.yong@students.plymouth.ac.uk
 **GitHub**: https://github.com/[your-username]/trailservice
 
 ---
